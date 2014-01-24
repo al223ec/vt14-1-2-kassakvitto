@@ -14,7 +14,9 @@
             <h1>Kassakvitto</h1>
             <p class="intro">
                 Total köpesumma:
-            <asp:TextBox ID="InputTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="InputTextBox" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="RequiredFieldValidator" ControlToValidate="InputTextBox"></asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="CompareValidator" ControlToValidate="InputTextBox"></asp:CompareValidator>
             </p>
             <p>
                 <asp:Button ID="SubmitButton" runat="server" Text="Beräkna rabatt" OnClick="SubmitButton_Click" />
