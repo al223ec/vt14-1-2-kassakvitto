@@ -15,8 +15,8 @@
             <p class="intro">
                 Total köpesumma:
                 <asp:TextBox ID="InputTextBox" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Detta fält får inte vara tomt" ControlToValidate="InputTextBox" Text="*" Display="Dynamic"></asp:RequiredFieldValidator>
-                <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Endast tal är tillåtna" ControlToValidate="InputTextBox" Text="*" Operator="DataTypeCheck" Type="Double" Display="Dynamic"></asp:CompareValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator" runat="server" ErrorMessage="Detta fält får inte vara tomt" ControlToValidate="InputTextBox" Text="*" Display="Dynamic"></asp:RequiredFieldValidator>
+                <asp:CompareValidator ID="OnlyDoubleValidator" runat="server" ErrorMessage="Endast tal är tillåtna" ControlToValidate="InputTextBox" Text="*" Operator="DataTypeCheck" Type="Double" Display="Dynamic"></asp:CompareValidator>
             </p>
             <p>
                 <asp:Button ID="SubmitButton" runat="server" Text="Beräkna rabatt" OnClick="SubmitButton_Click" />

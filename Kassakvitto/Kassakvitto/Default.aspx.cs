@@ -13,10 +13,15 @@ namespace Kassakvitto
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
-            OutputPanel.Visible = true; 
-            OutputLabel.Text = "<p> En p tag</p>";
-            OutputLabel.Text += "<p> En till p tag</p>"; 
-
+            double subtotal;
+            if (Double.TryParse(InputTextBox.Text, out subtotal) && subtotal > 0)
+            {
+                OutputPanel.Visible = true;
+                Recepit r = new Recepit(subtotal);
+                OutputLabel.Text =
+                    String.Format("<p><ul><li>Totalt: {0:c}</li><li>Rabattsats: {1:p0}</li><li>Rabatt: {2:c}</li><li>Att betala: {3:c}</li></ul></p>",
+                    r.Subtotal, r.DiscountRate, r.MoneyOff, r.Total);
+            }
         }
     }
 }
