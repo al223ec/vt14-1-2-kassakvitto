@@ -13,6 +13,9 @@ namespace Kassakvitto
 
         protected void SubmitButton_Click(object sender, EventArgs e)
         {
+            OutputPanel.Visible = true; 
+            OutputLabel.Text = "<p> En p tag</p>";
+            OutputLabel.Text += "<p> En till p tag</p>"; 
 
         }
     }
