@@ -40,22 +40,22 @@ namespace Kassakvitto {
         protected global::System.Web.UI.WebControls.TextBox InputTextBox;
         
         /// <summary>
-        /// RequiredFieldValidator control.
+        /// RequiredFieldValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
-        /// OnlyDoubleValidator control.
+        /// CompareValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator OnlyDoubleValidator;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// SubmitButton control.
@@ -67,15 +67,6 @@ namespace Kassakvitto {
         protected global::System.Web.UI.WebControls.Button SubmitButton;
         
         /// <summary>
-        /// ValidationSummary1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ValidationSummary ValidationSummary1;
-        
-        /// <summary>
         /// OutputPanel control.
         /// </summary>
         /// <remarks>
@@ -85,12 +76,12 @@ namespace Kassakvitto {
         protected global::System.Web.UI.WebControls.Panel OutputPanel;
         
         /// <summary>
-        /// OutputLabel control.
+        /// OutputLiteral control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label OutputLabel;
+        protected global::System.Web.UI.WebControls.Literal OutputLiteral;
     }
 }

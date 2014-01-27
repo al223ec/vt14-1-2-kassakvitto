@@ -24,7 +24,7 @@ namespace Kassakvitto
             }
         }
         public double DiscountRate { get; private set; }
-        public double MoneyOff { get { return Subtotal/100 * DiscountRate; }}
+        public double MoneyOff { get { return Subtotal * DiscountRate; }}
         public double Total { get { return Subtotal - MoneyOff; }}
 
         public Recepit(double subtotal) 
@@ -37,15 +37,15 @@ namespace Kassakvitto
             if (Subtotal < 500) { return; }
             else if (Subtotal < 1000)
             {
-                DiscountRate = 5;
+                DiscountRate = 0.05;
             }
             else if (Subtotal < 5000)
             {
-                DiscountRate = 10;
+                DiscountRate = 0.1;
             }
             else
             {
-                DiscountRate = 15; 
+                DiscountRate = 0.15; 
             }
         }
         public override string ToString()

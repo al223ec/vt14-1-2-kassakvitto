@@ -77,5 +77,15 @@ p.footer {
    margin-top: 45px;
    color: rgba(0,0,0,1);
 }
-
+.error {
+   font-size: 14px;
+   line-height: 26px;
+   margin-bottom: 35px;
+   padding-left: 15px;
+   border-width: 0px 0px 0px 3px;
+   border-style: solid;
+   border-color:red;
+   font-weight: 700;
+   color:red;
+}
  
