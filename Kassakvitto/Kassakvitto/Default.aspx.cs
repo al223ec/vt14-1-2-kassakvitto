@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Kassakvitto.Model;
 
 namespace Kassakvitto
 {
@@ -14,15 +15,28 @@ namespace Kassakvitto
         {
             if (IsValid)
             {
-                double subtotal;
-                if (Double.TryParse(InputTextBox.Text, out subtotal) && subtotal > 0)
+                try
                 {
-                    OutputPanel.Visible = true;
-                    Recepit r = new Recepit(subtotal);
+                    Recepit r = new Recepit(Double.Parse(InputTextBox.Text));
+
                     OutputLiteral.Text =
-                        String.Format("<ul><li>Totalt: {0:c}</li><li>Rabattsats: {1:p0}</li><li>Rabatt: {2:c}</li><li>Att betala: {3:c}</li></ul>",
+                        String.Format("{0:c}<br />{1:p0}<br />{2:c}<br />{3:c}<br />",
                         r.Subtotal, r.DiscountRate, r.MoneyOff, r.Total);
+
+                    OutputPanel.Visible = true; //allt har gått bra, visa outputen
+                    //String.Format("<ul><li>Totalt: {0:c}</li><li>Rabattsats: {1:p0}</li><li>Rabatt: {2:c}</li><li>Att betala: {3:c}</li></ul>",
                 }
+                catch (Exception ex)
+                {
+                    ModelState.AddModelError(String.Empty, ex.Message); //Måste ha en validation summary för att fungera
+                    //var validator = new CustomValidator
+                    //{
+                    //    IsValid = false,
+                    //    ErrorMessage = ex.Message
+                    //};
+                    //Page.Validators.Add(validator);
+                }
+
             }
         }
     }

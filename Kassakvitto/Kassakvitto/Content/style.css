@@ -8,6 +8,14 @@ div {
     width:600px; 
     margin:auto; 
 }
+    div .left {
+        float:left; 
+        width:50%;
+    }
+    div .right {
+        float:right; 
+        width:50%;
+    }
 .MultiLineTextBox
 {
     resize:none;
@@ -19,7 +27,6 @@ h1 {
 }
 h4 {
    font-size: 32px;
-   line-height: 32px;
 }
  
 p {
@@ -29,11 +36,13 @@ p {
    clear:both
 }
 .receipt {
+    padding:10px;
     border-width: 1px 1px 1px 1px;
     border-style:solid;
     width:200px;
     float:left;
     margin-bottom: 35px;
+    margin-top: 35px;
 }
 p.weights {
    letter-spacing: 2px;

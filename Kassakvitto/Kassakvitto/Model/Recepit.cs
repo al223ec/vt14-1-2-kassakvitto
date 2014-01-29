@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Kassakvitto
+namespace Kassakvitto.Model
 {
     public class Recepit
     {
@@ -27,7 +27,7 @@ namespace Kassakvitto
         public double MoneyOff { get { return Subtotal * DiscountRate; }}
         public double Total { get { return Subtotal - MoneyOff; }}
 
-        public Recepit(double subtotal) 
+        public Recepit(double subtotal)
         {
             Calculate(subtotal); 
         }
@@ -47,10 +47,6 @@ namespace Kassakvitto
             {
                 DiscountRate = 0.15; 
             }
-        }
-        public override string ToString()
-        {
-            return String.Format("Totalt: {0}kr Rabattsats: {1}% Rabatt: {2}kr Att betala: {3}kr", Subtotal, DiscountRate, MoneyOff, Total); 
         }
     }
 }
